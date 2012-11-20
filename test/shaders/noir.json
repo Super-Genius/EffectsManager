@@ -1,0 +1,50 @@
+{
+    "Effect": {
+        "Name": "Noir1920",
+        "Technique": [
+            {
+                "Name": "GLES20",
+                "Pass": {
+                	"Number": 0,
+                    "Shader": [
+                        {
+                            "Type": "vertex",
+                            "Source": "file://shaders/twoInput.vert"
+                        },
+                        {
+                            "Type": "fragment",
+                            "Source": "file://shaders/Filter1920.frag",
+                            "Texture": [
+	                            {
+	                                "Stage": 0,
+	                                "Auxiliary": 1
+	                            },
+	                            {
+	                                "Stage": 1,
+	                                "Source": "file://textures/effectcb.png"
+	                            }
+	                      	],
+                            "Uniform": [
+	                            {
+	                                "Name": "frameTime",
+	                                "Type": "float1",
+	                                "Values": 0.0
+	                            },
+	                            {
+	                                "Name": "vignetteX",
+	                                "Type": "float1",
+	                                "Values": 0.5
+	                            },
+	                            {
+	                                "Name": "vignetteY",
+	                                "Type": "float1",
+	                                "Values": 0.7
+	                            },
+	                    	]
+                        }
+                    ]
+                }      
+            }
+        ]
+    }
+}
