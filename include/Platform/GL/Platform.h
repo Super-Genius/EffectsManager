@@ -12,6 +12,7 @@
 
 #include <stdio.h>
 
+#ifdef _DEBUG
 #define LOG_INFO(...) printf("%s (Info): ", __FILE__);			\
 						printf(__VA_ARGS__);					\
 						printf("\n");
@@ -19,5 +20,9 @@
 #define LOG_ERROR(...) printf("%s (Error): ", __FILE__);			\
 						printf(__VA_ARGS__);					\
 						printf("\n");
+#else
+#define LOG_INFO(...)
+#define LOG_ERROR(...)
+#endif
 
 #endif	// GL_PLATFORM_H

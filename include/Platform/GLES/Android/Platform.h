@@ -36,6 +36,9 @@ GL_APICALL void GL_APIENTRY glUniformMatrix4x3fv (GLint location, GLsizei count,
 #ifdef _DEBUG
 #define LOG_INFO(...) __android_log_print(ANDROID_LOG_INFO, __FILE__, __VA_ARGS__)
 #define LOG_ERROR(...) __android_log_print(ANDROID_LOG_ERROR, __FILE__, __VA_ARGS__)
+#else
+#define LOG_INFO(...)
+#define LOG_ERROR(...)
 #endif
 
 #endif	// GLES_ANDROID_PLATFORM_H

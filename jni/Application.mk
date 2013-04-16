@@ -12,4 +12,4 @@ APP_STL := gnustl_static
 APP_MODULES := EffectsManager
 NDK_APP_OUT := $(call my-dir)/../libs/Android/$(CONFIG_DIR)
 APP_ABI := all
-APP_PLATFORM := android-14
+APP_PLATFORM := android-9
